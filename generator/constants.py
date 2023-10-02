@@ -1,3 +1,7 @@
+""""This module is to provide constants for generator modules"""
+
+# Right now the weapon code all associate with a buy mene slot
+# rather than the real weapon. For example
 WEAPONS = {
     'RIFLE': {
         'scout': 'ssg08',
@@ -94,5 +98,17 @@ BUTTONS = {
         'back': 'mouse5',
         'up': 'mwheelup',
         'dn': 'mwheeldown'
+    },
+    'SPECIAL': {
+        'tab': 'tab',
+        'cap': 'capslock',
+        'control': 'ctrl',
+        'shift': 'shift',
+        'alt': 'alt',
+        'space': 'space',
+        'alt-r': 'ralt',
+        'control-r': 'rctrl',
+        'enter': 'enter',
+        'backspace': 'backspace'
     }
 }
