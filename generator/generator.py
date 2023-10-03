@@ -3,6 +3,7 @@ import os
 from helpers import alias, bind, buy, exec_cfg
 from constants import BUTTONS, WEAPONS, PATHS, SLOTS, CFGS
 
+
 def generate_autoexec():
     """generate_autoexec generates autoexec.cfg"""
     path = os.path.abspath(PATHS.autoexec)
@@ -12,7 +13,8 @@ def generate_autoexec():
 
         # buy bindings
         file.write(bind(BUTTONS.NAV.ins, buy(WEAPONS.UTIL.decoy)))
-        file.write(bind(BUTTONS.NAV.home, buy(WEAPONS.UTIL.fireT), buy(WEAPONS.UTIL.fireCT)))
+        file.write(bind(BUTTONS.NAV.home, buy(
+            WEAPONS.UTIL.fireT), buy(WEAPONS.UTIL.fireCT)))
         file.write(bind(BUTTONS.NAV.pgup, buy(WEAPONS.UTIL.zeus)))
         file.write(bind(BUTTONS.NAV.delete, buy(WEAPONS.UTIL.flash)))
         file.write(bind(BUTTONS.NAV.end, buy(WEAPONS.UTIL.he)))
@@ -36,11 +38,11 @@ def generate_autoexec():
         file.write(bind(BUTTONS.MOUSE.dn, '+duck') + '\n')
 
         # general bindings
-        file.write(bind('j', exec_cfg('teammenu')))
+        file.write(bind('j', 'teammenu'))
         file.write(bind('/', 'kill', 'mp_restartgame 1', 'mp_warmup_end'))
         file.write(bind(BUTTONS.SPECIAL.alt, 'noclip'))
         file.write(bind(BUTTONS.NAV.up, 'toggle voice_enable 0 1') + '\n')
 
         # alias
         file.write(alias('dd', 'disconnect'))
-        file.write(alias('qq', 'quit') + '\n')
+        file.write(alias('qq', 'quit'))

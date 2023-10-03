@@ -141,4 +141,3 @@ PATHS = DotDict({
     CFGS.jumpthrow: f"./cfg/{CFGS.jumpthrow}.cfg",
     CFGS.jumprunthrow: f"./cfg/{CFGS.jumprunthrow}.cfg"
 })
-
