@@ -39,10 +39,11 @@ def generate_autoexec():
 
         # general bindings
         file.write(bind('j', 'teammenu'))
+        file.write(bind('t', '+spray_menu'))
         file.write(bind('/', 'kill', 'mp_restartgame 1', 'mp_warmup_end'))
         file.write(bind(BUTTONS.SPECIAL.alt, 'noclip'))
         file.write(bind(BUTTONS.NAV.up, 'toggle voice_enable 0 1') + '\n')
 
         # alias
         file.write(alias('dd', 'disconnect'))
-        file.write(alias('qq', 'quit'))
+        file.write(alias('qq', 'quit') + '\n')
