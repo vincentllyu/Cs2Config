@@ -21,6 +21,10 @@ def buy(item: str) -> str:
     """buy returns the buy command for the passed in item"""
     return f"buy {item}"
 
+def exec_cfg(filename: str) -> str:
+    """exec returns the exec command for a cfg file"""
+    return f"exec {filename}.cfg"
+
 
 class DotDict(dict):
     """dot.notation access to dictionary attributes"""
