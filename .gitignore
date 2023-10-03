@@ -1,2 +1,5 @@
 // Mac env files
 .DS_STORE
+
+// python generated files
+__pycache__

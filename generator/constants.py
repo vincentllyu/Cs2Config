@@ -1,8 +1,10 @@
 """"This module is to provide constants for generator modules"""
 
+from helpers import DotDict
+
 # Right now the weapon code all associate with a buy mene slot
 # rather than the real weapon. For example
-WEAPONS = {
+WEAPONS = DotDict({
     'RIFLE': {
         'scout': 'ssg08',
         'galil': 'galilar',
@@ -57,9 +59,9 @@ WEAPONS = {
         'zeus': 'taser',
         'kit': 'defuser'
     }
-}
+})
 
-BUTTONS = {
+BUTTONS = DotDict({
     'NUMPAD': {
         '4': 'kp_leftarrow',
         '.': 'kp_del',
@@ -82,7 +84,7 @@ BUTTONS = {
         'ins': 'ins',
         'home': 'home',
         'pgup': 'pgup',
-        'del': 'del',
+        'delete': 'del',
         'end': 'end',
         'pgdn': 'pgdn',
         'up': 'uparrow',
@@ -111,4 +113,21 @@ BUTTONS = {
         'enter': 'enter',
         'backspace': 'backspace'
     }
-}
+})
+
+SLOTS = DotDict({
+    'primary': 'slo1',
+    'pistol': 'slot2',
+    'knife': 'slot3',
+    'nades': 'slot4',
+    'c4': 'slot5',
+    'he': 'slot6',
+    'flash': 'slot7',
+    'smoke': 'slot8',
+    'decoy': 'slot9',
+    'fire': 'slot10'
+})
+
+PATHS = DotDict({
+    'autoexec': './cfg/autoexec.cfg'
+})
