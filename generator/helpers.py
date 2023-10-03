@@ -29,7 +29,6 @@ def exec_cfg(filename: str) -> str:
 
 class DotDict(dict):
     """dot.notation access to dictionary attributes"""
-
     def __getattr__(self, *args):
         val = super().get(*args)
         return DotDict(val) if isinstance(val, dict) else val
