@@ -9,7 +9,7 @@ def generate_autoexec():
     path = os.path.abspath(PATHS.autoexec)
     with open(path, 'w', encoding='utf-8', ) as file:
         # first line won't be executed
-        file.write('# file generated with code, do not edit.\n\n')
+        file.write('// file generated with code, do not edit.\n\n')
 
         # buy bindings
         file.write(bind(BUTTONS.NAV.ins, buy(WEAPONS.UTIL.decoy)))
