@@ -48,4 +48,4 @@ def generate_autoexec():
 
         # alias
         file.write(alias('dd', 'disconnect'))
-        file.write(alias('qq', 'quit') + '\n')
+        file.write(alias('qq', 'quit'))
