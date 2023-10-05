@@ -130,14 +130,10 @@ SLOTS = DotDict({
 
 CFGS = DotDict({
     'autoexec': 'autoexec',
-    'mapruns': 'mapruns',
-    'jumpthrow': 'jumpthrow',
-    'jumprunthrow': 'jumprunthrow'
+    'mapruns': 'mapruns'
 })
 
 PATHS = DotDict({
     CFGS.autoexec: f"./cfg/{CFGS.autoexec}.cfg",
-    CFGS.mapruns: f"./cfg/{CFGS.mapruns}.cfg",
-    CFGS.jumpthrow: f"./cfg/{CFGS.jumpthrow}.cfg",
-    CFGS.jumprunthrow: f"./cfg/{CFGS.jumprunthrow}.cfg"
+    CFGS.mapruns: f"./cfg/{CFGS.mapruns}.cfg"
 })

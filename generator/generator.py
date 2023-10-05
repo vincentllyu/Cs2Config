@@ -29,9 +29,11 @@ def generate_autoexec():
         file.write(bind('m', SLOTS.fire) + '\n')
 
         # exec
-        file.write(bind('h', exec_cfg(CFGS.jumpthrow)))
-        file.write(bind('o', exec_cfg(CFGS.jumprunthrow)))
         file.write(bind('.', exec_cfg(CFGS.mapruns)) + '\n')
+
+        # jump throw binds
+        file.write(bind('h', '+jump', '-attack', '-attack2', '-jump'))
+        file.write(bind('o', '+jump', '+forward', '-attack', '-attack2', '-forward', '-jump'))
 
         # mouse
         file.write(bind(BUTTONS.MOUSE.up, '+jump'))
