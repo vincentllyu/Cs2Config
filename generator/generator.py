@@ -36,6 +36,7 @@ def generate_autoexec():
         file.write(bind('o', '+jump', '+forward', '-attack', '-attack2', '-forward', '-jump'))
 
         # mouse
+        file.write(bind(BUTTONS.MOUSE.mid, 'sv_rethrow_last_grenade'))
         file.write(bind(BUTTONS.MOUSE.up, '+jump'))
         file.write(bind(BUTTONS.MOUSE.dn, '+duck') + '\n')
 
