@@ -31,10 +31,6 @@ def generate_autoexec():
         # exec
         file.write(bind('.', exec_cfg(CFGS.mapruns)) + '\n')
 
-        # jump throw binds
-        file.write(bind('h', '+jump', '-attack', '-attack2', '-jump'))
-        file.write(bind('o', '+jump', '+forward', '-attack', '-attack2', '-forward', '-jump'))
-
         # mouse
         file.write(bind(BUTTONS.MOUSE.mid, 'sv_rethrow_last_grenade'))
         file.write(bind(BUTTONS.MOUSE.up, '+jump'))
@@ -49,4 +45,13 @@ def generate_autoexec():
 
         # alias
         file.write(alias('dd', 'disconnect'))
-        file.write(alias('qq', 'quit'))
+        file.write(alias('qq', 'quit') + '\n')
+
+        # jump throw alias
+        file.write(alias('+throwaction', '-attack', '-attack2'))
+        file.write(alias('+runthrow', '+forward', '+jump'))
+        file.write(alias('-runthrow', '-jump', '-forward' + '\n'))
+
+        # jumpthrow binds
+        file.write(bind('h', '+jump', '+throwaction'))
+        file.write(bind('o', '+runthrow', '+throwaction'))
