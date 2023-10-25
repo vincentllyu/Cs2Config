@@ -50,7 +50,7 @@ def generate_autoexec():
         # jump throw alias
         file.write(alias('+throwaction', '-attack', '-attack2'))
         file.write(alias('+runthrow', '+forward', '+jump'))
-        file.write(alias('-runthrow', '-jump', '-forward' + '\n'))
+        file.write(alias('-runthrow', '-jump', '-forward') + '\n')
 
         # jumpthrow binds
         file.write(bind('h', '+jump', '+throwaction'))
