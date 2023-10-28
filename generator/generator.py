@@ -24,6 +24,7 @@ def generate_autoexec():
         file.write(bind(BUTTONS.NAV.rt, buy(WEAPONS.UTIL.kit)) + '\n')
 
         # weapon slot switch bind
+        file.write(bind('4', SLOTS.he))
         file.write(bind('v', SLOTS.flash))
         file.write(bind('n', SLOTS.smoke))
         file.write(bind('m', SLOTS.fire) + '\n')
@@ -54,4 +55,9 @@ def generate_autoexec():
 
         # jumpthrow binds
         file.write(bind('h', '+jump', '+throwaction'))
-        file.write(bind('o', '+runthrow', '+throwaction'))
+        file.write(bind('o', '+runthrow', '+throwaction') + '\n')
+
+        # crouch jump
+        file.write(alias('+djump', '+jump', '+duck'))
+        file.write(alias('-djump', '-jump', '-duck'))
+        file.write(bind(BUTTONS.SPECIAL.space, '+djump'))
